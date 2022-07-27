@@ -1,0 +1,262 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ResetCasiTest" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_dt_TestCase" Type="InArgument(sd:DataTable)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1706,2977</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ResetCasiTest_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ResetCasiTest" sap:VirtualizedContainerService.HintSize="924,2912" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="StringaPolizze" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dt_TestCase]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="882,925" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,810" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <If Condition="[CurrentRow(&quot;Polizza&quot;).ToString &lt;&gt; &quot;-&quot;]" sap:VirtualizedContainerService.HintSize="562,718" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="526,531" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="x:String">[StringaPolizze]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="x:String">[StringaPolizze+CurrentRow("Polizza").ToString]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                  <If Condition="[in_dt_TestCase.Rows.IndexOf(CurrentRow) &lt;&gt; in_dt_TestCase.RowCount-1]" sap:VirtualizedContainerService.HintSize="484,339" sap2010:WorkflowViewState.IdRef="If_1">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[StringaPolizze]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[StringaPolizze+","]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="242,83" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+    <If Condition="[StringaPolizze.Substring(StringaPolizze.Length-1) = &quot;,&quot;]" sap:VirtualizedContainerService.HintSize="882,339" sap2010:WorkflowViewState.IdRef="If_3">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="304,152" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[StringaPolizze]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">[StringaPolizze.Substring(0,StringaPolizze.Length-1)]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: DBeaver 21.3.4 - &lt;DB2T&gt; Script-1" sap:VirtualizedContainerService.HintSize="882,1476" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="1af1e459-6dab-45d6-9d6f-d6ba20e7be14" Version="V1" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="848,1187" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="806,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(ctrl)]a[u(ctrl)][u(hk)][d(hk)][k(del)][u(hk)]" Version="V1" />
+            <uix:NTypeInto ActivateBefore="{x:Null}" ClickBeforeMode="None" DisplayName="Type Into 'editable text'" EmptyFieldMode="None" sap:VirtualizedContainerService.HintSize="806,216" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="WindowMessages" ScopeIdentifier="1af1e459-6dab-45d6-9d6f-d6ba20e7be14" Text="[&quot;UPDATE LIFETXSG.auto_movimenti SET stato_richiesta = 3 WHERE polizza IN (&quot;+StringaPolizze+&quot;) AND stato_richiesta IN (1,2)&quot;]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="625, 132, 1263, 891" ElementType="InputBox" FriendlyName="'editable text'" FullSelectorArgument="&lt;wnd aaname='DBeaver' cls='SWT_Window0' /&gt;&lt;wnd aaname='*&amp;lt;DB2T&amp;gt; Script-1' cls='SWT_Window0' /&gt;&lt;wnd aaname='&amp;lt;DB2T&amp;gt; Script-1' cls='SWT_Window0' /&gt;&lt;wnd aaname='Orizzontale' cls='SWT_Window0' /&gt;&lt;ctrl role='editable text' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='DBeaver' cls='SWT_Window0' /&gt;&lt;wnd aaname='*&amp;lt;DB2T&amp;gt; Script-1' cls='SWT_Window0' /&gt;&lt;wnd aaname='&amp;lt;DB2T&amp;gt; Script-1' cls='SWT_Window0' /&gt;&lt;wnd aaname='Orizzontale' cls='SWT_Window0' /&gt;&lt;ctrl role='editable text' automationid='' /&gt;" Guid="a7136d2f-9ae6-45d2-bdcf-5040f806e25b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABPMAAAN/CAYAAAC7tZ2DAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAABoQSURBVHhe7dixaQRREETByz9SmYustbRSH8gQKID/oAqagQnhva7reszMzMzMzMzMzOz8iXlmZmZmZmZmZmaRvZ4f933vvH18fpmZmZmZmZmZmdlBGzHPzMzMzMzMzMwssBHzzMzMzMzMzMzMAhsxz8zMzMzMzMzMLLAR88zMzMzMzMzMzAIbMc/MzMzMzMzMzCywEfPMzMzMzMzMzMwCGzHPzMzMzMzMzMwssBHzzMzMzMzMzMzMAhsxz8zMzMzMzMzMLLAR88zMzMzMzMzMzAIbMc/MzMzMzMzMzCywEfPMzMzMzMzMzMwCGzHPzMzMzMzMzMwssBHzzMzMzMzMzMzMAhsxz8zMzMzMzMzMLLAR88zMzMzMzMzMzAIbMc/MzMzMzMzMzCywEfPMzMzMzMzMzMwCGzHPzMzMzMzMzMwssPk35gEAAAAA5xHzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAIAIMQ8AAAAAIsQ8AAAAAIgQ8wAAAAAgQswDAAAAgAgxDwAAAAAixDwAAAAAiBDzAAAAACBCzAMAAACACDEPAAAAACLEPAAAAACIEPMAAAAAIELMAwAAAICId8xbyBPzAAAAAOBcC3l/Yt7vw8zMzMzMzMzMzE7c9XwD/75H12HULuoAAAAASUVORK5CYII=" InformativeScreenshot="021746890600c0fde8734d82166fdea4.png" ScopeSelectorArgument="&lt;wnd app='dbeaver.exe' cls='SWT_Window0' title='DBeaver 21.3.4 - &amp;lt;DB2T&amp;gt; Script-1' /&gt;" SearchSteps="Selector, FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="9, 38, 1902, 24" ElementType="Toolbar" FriendlyName="'applicazione'" FullSelectorArgument="&lt;ctrl automationid='MenuBar' name='applicazione' role='menu bar' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MenuBar' name='applicazione' role='menu bar' check:text='applicazione' /&gt;" ImageBase64="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" SearchSteps="Selector, FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="806,178" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_2" Shortcuts="[d(hk)][d(ctrl)][k(enter)][u(ctrl)][u(hk)]" Version="V1" />
+            <uix:NCheckState Exists="{x:Null}" DisplayName="Check App State 'Name'" sap:VirtualizedContainerService.HintSize="806,401" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="1af1e459-6dab-45d6-9d6f-d6ba20e7be14" Timeout="20" Version="V1">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="376,185" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Casi di test ripristinati&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="376,185" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Error" Message="[&quot;Casi di test non ripristinati&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="738, 622, 1579, 19" FriendlyName="'Updated Rows'" FullSelectorArgument="&lt;wnd aaname='*&amp;lt;DB2T&amp;gt; Script-4' cls='SWT_Window0' /&gt;&lt;wnd aaname='&amp;lt;DB2T&amp;gt; Script-4' cls='SWT_Window0' /&gt;&lt;wnd aaname='Statistics 1' cls='SWT_Window0' /&gt;&lt;wnd cls='SysListView32' idx='2' /&gt;&lt;ctrl name='Updated Rows' role='list item' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='*&amp;lt;DB2T&amp;gt; Script-4' cls='SWT_Window0' /&gt;&lt;wnd aaname='&amp;lt;DB2T&amp;gt; Script-4' cls='SWT_Window0' /&gt;&lt;wnd aaname='Statistics 1' cls='SWT_Window0' /&gt;&lt;wnd cls='SysListView32' /&gt;&lt;ctrl name='Updated Rows' role='list item' automationid='' check:text='Updated Rows' /&gt;" Guid="1c7df4ac-6616-45fa-820e-6048b2a9a8c2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABi8AAAAXCAYAAABzu9wvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANpSURBVHhe7d1LcuI6FAZgr8sL8npYDYtJxhndSQZ33GpLfiAJI8AV3J3091WdCn4dKwz1l0T3+fkZ3t7eAq/z8fExfwIAAAAAALbkc+nCiwMILwAAAAAAoE14cbD//v8V4vcMAAAAAABsy+fShRcHEF4AAAAAAECb8OJgwgsAAAAAAGgTXhxMeAEAAAAAAG3Ci4MJLwAAAAAAoO3J8OIchq4Pp/f5MNk694i9zz3iVu94vgtdVsN5vnSQh8KL8zCObRhHm0nnpjH3r/nSAAAAAADgr/CXhxdf3bs6vxUSvFg7vHgPp74L3TCM48zHlY9773cCAAAAAADfw78dXuzuv99DKy/SuLLw4v0U+v4UlmGeh+NXjAAAAAAAwFG+OLyYP59Pod/a4ihOwq/nT0WvOCG/bIvUpZn52Ks+N8p6FKsmGr0vqvHHlRdZKFD2vgQEZVhQ9YjPpIvzqonq2dqu8CL1Xt5ZXwMAAAAAgJ/lBeFFdwkEUhhQXrtkEH3ornpFdb/8nur4PMzhyDO9LwHDGogkZY9i7DHkWC7Ed/b9GsrEd6XP+T0N+8KLURasPPAaAAAAAAD4tl6z8iK7vq5aiJPv+SqH+t44+b+ECrf6ZRP4a8Xm93qvsvOpV71yowwMtsZ+Hsbn48qSdJytiJjHdu/HtHeFF9X/Z9soAAAAAAB+sifDi3z7olkx6V+HBtNWSnfDi6JHvUVS1q+4L9PqXSjPr6smpoPb4cU6pvH5NbQY771679Qzhiq3woU94UUxzujBVR4AAAAAAPAdPRleTBP6+e9EpON1Ij1OumerD4pAYLq23Fps7RQn45ee6ZklYCjDhqv+q0bvwla//F1Z6FCFGSlAqLaLGoZl26rSVdiQ2bXyIv9+0uH9FR4AAAAAAPBdPR1ehLTqINu2qVh5MIUBwzCtPrhagZBtDVX+qHbWsx/CkK3uSOFIPH9JJkKxddRy/mbvXB1eTEFDGZwsvavni1Bl4zh7f/FD4pVd4cVoCmTm/sWXCgAAAAAAP8uO8KLlOhyg9Fh4AQAAAAAA/y7hxcGEFwAAAAAA0Ca8OJjwAgAAAAAA2r44vOAe4QUAAAAAALRthhfxr1JKKaWUUkoppZRSSiml1J8uKy8OYOUFAAAAAAC02TbqYMILAAAAAABou8ylh/Ab8ib8tE0dXdQAAAAASUVORK5CYII=" InformativeScreenshot="19626ad561696fbaeacb446dd085b0a7.png" ScopeSelectorArgument="&lt;wnd app='dbeaver.exe' cls='SWT_Window0' title='DBeaver 22.1.0 - &amp;lt;DB2T&amp;gt; Script-4' /&gt;" SearchSteps="FuzzySelector">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="738, 598, 88, 24" FriendlyName="'Name'" FullSelectorArgument="&lt;wnd aaname='*&amp;lt;DB2T&amp;gt; Script-4' cls='SWT_Window0' /&gt;&lt;wnd aaname='&amp;lt;DB2T&amp;gt; Script-4' cls='SWT_Window0' /&gt;&lt;wnd aaname='Statistics 1' cls='SWT_Window0' /&gt;&lt;wnd aaname='Controllo intestazione' cls='SysHeader32' idx='2' /&gt;&lt;ctrl automationid='Header' /&gt;&lt;ctrl automationid='HeaderItem 0' /&gt;" FuzzySelectorArgument="&lt;wnd aaname='*&amp;lt;DB2T&amp;gt; Script-4' cls='SWT_Window0' /&gt;&lt;wnd aaname='&amp;lt;DB2T&amp;gt; Script-4' cls='SWT_Window0' /&gt;&lt;wnd aaname='Statistics 1' cls='SWT_Window0' /&gt;&lt;wnd aaname='Controllo intestazione' cls='SysHeader32' /&gt;&lt;ctrl automationid='Header' /&gt;&lt;ctrl automationid='HeaderItem 0' role='column header' check:text='Name' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFwAAAAcCAYAAADst9g0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE8SURBVGhD7ZVBbsQgDEU5FwfiPBwhp+AwyTqrbrLouq7NAAHaqSYgWZr0PwkJYyeLF8eY4zhoXVdalgVLYRXhQAcIV2Df97SDcBUgXBkIVwbClYFwZSBcmYvCAzljyLiQ4oycW/JbCsFTBoRbstZQ6xzCX2VIuA+epXs6/UL4q4wJZ7HBGbLFcCtcckZGTzN+qo+VcpLavC215/uY7awzxvHT92BY+PN9TV/D8vKfEVwrOcZZbPc+zjUf442ZEC4hS4od/Mt56c5aeFXzV9x0d1o/Lur3ZE4496qPF2gvK3eq5HP9VeH3GSM1k8KZ0o3pXLo7j42Yy/UXhMd9N9Nvwrxw5nHx5fNH18cxYB25kQ4X+rHyP0cKmAXClYFwZSBcGQhXBsKVgXBlIFwZCFfm4/OLxLMA4Qqcwom+AdQipJw50GgGAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1048" FilePath="C:\Users\AndreaMazzucchelli\AppData\Local\DBeaver\dbeaver.exe" IconBase64="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" InformativeScreenshot="c7c95b9c1fb6b04462595527b3daa685.png" Selector="&lt;wnd app='dbeaver.exe' cls='SWT_Window0' title='DBeaver 21.3.4 - &amp;lt;DB2T&amp;gt; Script-1'/&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
